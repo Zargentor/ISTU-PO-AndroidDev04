@@ -47,5 +47,19 @@
             android:onClick="@{() -> viewModel.deleteTask()}"
             android:text="Delete Task" />
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:text="Привет" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.setRanbowcolorOnText(textView2)}"
+            android:text="Switch" />
+
     </LinearLayout>
 </layout>

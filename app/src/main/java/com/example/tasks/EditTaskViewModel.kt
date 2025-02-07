@@ -1,5 +1,7 @@
 package com.example.tasks
 
+import android.graphics.Color
+import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -28,5 +30,14 @@ class EditTaskViewModel(taskId: Long, val dao: TaskDao) : ViewModel() {
 
     fun onNavigateToList() {
         _navigateToList.value = false
+    }
+    fun setRanbowcolorOnText(textView : TextView)
+    {
+        val rndRed = (1..255).random()
+        val rndGreen = (1..255).random()
+        val rndBlue = (1..255).random()
+        val color = Color.argb(255, rndRed, rndGreen, rndBlue)
+        textView.setTextColor(color)
+
     }
 }
